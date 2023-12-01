@@ -1,30 +1,24 @@
-function mergeSortedArrays(arr1, arr2) {
+function mergeSortedArrays(array1, array2) {
   let result = [];
   let i = 0;
   let j = 0;
-  let arr1Ele = arr1[0];
-  let arr2Ele = arr2[0];
+  let array1Element = array1[0];
+  let array2Element = array2[0];
 
-  while (arr1Ele || arr2Ele) {
-    if (arr1Ele < arr2Ele) {
-      result.push(arr1Ele);
+  while (array1Element !== undefined && array2Element !== undefined) {
+    if (array1Element < array2Element) {
+      result.push(array1Element);
       i++;
-      arr1Ele = arr1[i];
+      array1Element = array1[i];
     } else {
-      result.push(arr2Ele);
+      result.push(array2Element);
       j++;
-      arr2Ele = arr2[j];
-    }
-
-    if (arr1Ele === undefined) {
-      result.push(arr2Ele);
-      break;
-    }
-    if (arr2Ele === undefined) {
-      result.push(arr1Ele);
-      break;
+      array2Element = array2[j];
     }
   }
+
+  const lastElement = array1[array1.length - 1] || array2[array2.length - 1];
+  result.push(lastElement);
 
   return result;
 }
