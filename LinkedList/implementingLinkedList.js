@@ -1,3 +1,5 @@
+// Implementing Linked List
+
 class LinkedList {
   constructor(value) {
     this.head = {
