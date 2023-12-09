@@ -18,5 +18,5 @@ function findFactorialIterative(number) {
   return answer;
 }
 
-console.log(findFactorialIterative(5));
-console.log(findFactorialRecursive(5));
+console.log(findFactorialIterative(5)); // O(n)
+console.log(findFactorialRecursive(5)); // O(n)
